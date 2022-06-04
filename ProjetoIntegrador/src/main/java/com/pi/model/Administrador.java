@@ -12,6 +12,7 @@ public class Administrador extends Usuario {
 	}
 	
 
+
 	public ArrayList<Cliente> getListaClientes() {
 		return listaClientes;
 	}

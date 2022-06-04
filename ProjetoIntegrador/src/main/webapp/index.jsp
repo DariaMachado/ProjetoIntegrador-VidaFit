@@ -25,7 +25,7 @@
 					<div class="input-field col s6">
 						<i class="material-icons prefix">account_box</i>
 						<input id="account_box" type="text" class="validate"  name="email">
-						<label for="account_box">Usuário</label>
+						<label for="account_box">E-mail</label>
 			        </div>
 				</td>
 			</tr>
@@ -38,6 +38,7 @@
 			        </div>
 				</td>
 			</tr>
+			
 		</table>
 		<div class="center-align">
 		  <button class="btn waves-effect waves-light" type="submit" value="Login">Login

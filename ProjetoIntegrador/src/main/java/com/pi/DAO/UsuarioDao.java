@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
 import com.pi.model.Usuario;
 
 public class UsuarioDao {
@@ -34,11 +35,16 @@ public class UsuarioDao {
 			resultSet = this.statement.executeQuery();
 
 			if (resultSet.next()) {	
-				usuario.setEmail(resultSet.getString(1));
-				usuario.setSenha(resultSet.getInt(2));
-				usuario.setIdTipo(resultSet.getInt(3));
-				
+				usuario.setId(resultSet.getInt(1));
+				usuario.setIdTipo(resultSet.getInt(2));
+				usuario.setNome(resultSet.getString(3));
+				usuario.setCpf(resultSet.getString(4));
+				usuario.setRg(resultSet.getString(5));
+				usuario.setTelefone(resultSet.getString(6));
+				usuario.setEmail(resultSet.getString(7));
+				usuario.setSenha(resultSet.getInt(8));
 			}
+			
 			this.statement.close();
 			resultSet.close();
 		} catch (SQLException e) {
