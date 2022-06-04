@@ -1,35 +1,37 @@
 package com.pi.model;
 
 public class Usuario {
-	private int id;
-	private String user;
-	private String senha;
+	private int idTipo;
+	private String email;
+	private int senha;
 	
-	
-	
-	
+
 	public Usuario() {
 		super();
 		
 	}
-	public String getUser() {
-		return user;
+	
+	public String getEmail() {
+		return email;
 	}
-	public void setUser(String user) {
-		this.user = user;
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public String getSenha() {
+
+	public int getSenha() {
 		return senha;
 	}
-	public void setSenha(String senha) {
+	public void setSenha(int senha) {
 		this.senha = senha;
 	}
-	public int getId() {
-		return id;
+	public int getIdTipo() {
+		return idTipo;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setIdTipo(int idTipo) {
+		this.idTipo = idTipo;
 	}
+	
 	
 	
 	

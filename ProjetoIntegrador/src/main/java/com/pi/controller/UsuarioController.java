@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class UsuarioController
  */
-@WebServlet("/UsuarioController")
+@WebServlet(description = "Controle das informacoes da tabela usuario", urlPatterns = "/usuario")
 public class UsuarioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

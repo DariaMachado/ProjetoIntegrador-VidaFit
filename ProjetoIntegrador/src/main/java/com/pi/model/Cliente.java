@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Cliente extends Usuario {
 	private String nome;
 	private String cpf;
-	private String email;
 	private String telefone;
 	private ArrayList<Endereco> listaEnderecos;
 	private ArrayList<Pedido> listaPedidos;
@@ -28,12 +27,7 @@ public class Cliente extends Usuario {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
+
 	public String getTelefone() {
 		return telefone;
 	}
