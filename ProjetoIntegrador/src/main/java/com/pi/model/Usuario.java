@@ -3,7 +3,8 @@ package com.pi.model;
 public class Usuario {
 	private int id;
 	private int idTipo;
-	private String nome;
+	private String primeiroNome;
+	private String nomeCompleto;
 	private String cpf;
 	private String rg;
 	private String telefone;
@@ -16,22 +17,13 @@ public class Usuario {
 		
 	}
 	
-	
-
-
 	public int getId() {
 		return id;
 	}
 
-
-
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-
-
 
 	public int getIdTipo() {
 		return idTipo;
@@ -43,13 +35,21 @@ public class Usuario {
 	}
 
 
-	public String getNome() {
-		return nome;
+	public String getPrimeiroNome() {
+		return primeiroNome;
+	}
+
+	public void setPrimeiroNome(String primeiroNome) {
+		this.primeiroNome = primeiroNome;
+	}
+
+	public String getNomeCompleto() {
+		return nomeCompleto;
 	}
 
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeCompleto(String nomeCompleto) {
+		this.nomeCompleto = nomeCompleto;
 	}
 
 

@@ -2,6 +2,7 @@ package com.pi.model;
 
 public class Endereco {
 	private int id;
+	private int idCliente;
 	private String rua;
 	private int numero;
 	private String cep;
@@ -16,6 +17,14 @@ public class Endereco {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	
+	public int getIdCliente() {
+		return idCliente;
+	}
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
 	}
 	public String getRua() {
 		return rua;
