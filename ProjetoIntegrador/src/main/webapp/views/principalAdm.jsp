@@ -23,7 +23,7 @@
 	 	<tr>
 	 		<td>
 				<font size="3">
-		 			Bem vindo <c:out value="${sessionScope.usuario.PrimeiroNome}"/>, deseja fazer <a href="logout">Logout?</a>
+		 			Bem vindo <c:out value="${sessionScope.usuario.primeiroNome}"/>, deseja fazer <a href="logout">Logout?</a>
 	 			</font>
 	 		</td>
 	 	</tr>

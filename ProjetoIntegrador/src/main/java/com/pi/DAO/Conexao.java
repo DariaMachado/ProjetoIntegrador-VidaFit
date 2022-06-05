@@ -28,5 +28,5 @@ private static BasicDataSource dataSource = null;
 	public static Connection getConnection() throws SQLException {
 		return getDataSource().getConnection();
 	}
-
 }
+

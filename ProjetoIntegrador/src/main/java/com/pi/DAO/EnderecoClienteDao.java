@@ -3,6 +3,7 @@ package com.pi.DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import com.pi.model.Endereco;
 
@@ -19,7 +20,7 @@ public class EnderecoClienteDao {
 		this.connection = obterConexao();
 
 		try {
-			// this.connection.setAutoCommit(false);
+			this.connection.setAutoCommit(false);
 			sql = "INSERT INTO endereco(idPessoa, estado, cidade, cep, rua, numero, complemento) VALUES (?,?,?,?,?,?,?)";
 			this.statement = this.connection.prepareStatement(sql);
 
@@ -30,6 +31,7 @@ public class EnderecoClienteDao {
 			this.statement.setString(5, endereco.getRua());
 			this.statement.setInt(6, endereco.getNumero());
 			this.statement.setString(7, endereco.getComplemento());
+			
 			this.estadoOperacao = this.statement.executeUpdate() > 0;
 
 			this.connection.commit();

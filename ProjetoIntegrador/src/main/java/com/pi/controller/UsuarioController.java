@@ -72,7 +72,7 @@ public class UsuarioController extends HttpServlet {
 			Cliente usuario = new Cliente();
 			
 			
-			usuario.setNomeCompleto(request.getParameter("nome"));
+			usuario.setPrimeiroNome(request.getParameter("nome"));
 			usuario.setEmail(request.getParameter("email"));
 			usuario.setCpf(request.getParameter("cpf"));
 			usuario.setRg(request.getParameter("rg"));
@@ -80,7 +80,9 @@ public class UsuarioController extends HttpServlet {
 			usuario.setSenha(Integer.parseInt(request.getParameter("senha")));
 			//Como somente clientes realizarão o cadastro, setamos o tipo de usuário diretamente;
 			usuario.setIdTipo(2);
-			usuario.setPrimeiroNome(extrairPrimeiroNome(usuario));
+			String sobrenome = request.getParameter("sobrenome");
+			String nome = usuario.getPrimeiroNome();
+			usuario.setNomeCompleto(nome + " " + sobrenome);
 			
 
 			try {
@@ -129,23 +131,6 @@ public class UsuarioController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
-	}
-	
-	public String extrairPrimeiroNome(Cliente usuario) {
-		String primeiroNome = "";
-		String nomeCompleto = usuario.getNomeCompleto();
-		int i = 0;
-		
-		while(i < nomeCompleto.length()){
-			if(nomeCompleto.charAt(i) != ' ') {
-				primeiroNome += nomeCompleto.charAt(i);
-			}
-			else {
-				break;
-			}
-		}	
-		
-		return primeiroNome;
 	}
 
 }

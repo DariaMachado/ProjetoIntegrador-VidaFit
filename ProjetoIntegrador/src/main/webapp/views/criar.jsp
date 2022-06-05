@@ -43,7 +43,16 @@
 					<div class="input-field col s6">
 						<i class="material-icons prefix">account_box</i>
 						<input id="nome_prefix" type="text" class="validate" campo-obrigatorio size="200" name="nome">
-						<label for="nome_prefix">Nome Completo <font color="red">(Obrigatório)</font></label>
+						<label for="nome_prefix">Primeiro Nome <font color="red">(Obrigatório)</font></label>
+			        </div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="input-field col s6">
+						<i class="material-icons prefix">account_box</i>
+						<input id="nome_prefix" type="text" class="validate" campo-obrigatorio size="200" name="sobrenome">
+						<label for="nome_prefix">Sobrenome <font color="red">(Obrigatório)</font></label>
 			        </div>
 				</td>
 			</tr>
@@ -60,7 +69,7 @@
 				<td>
 					<div class="input-field col s6">
 						<i class="material-icons prefix">subtitles</i>
-						<input id="cpf_prefix" type="text" class="validate" campo-obrigatorio size="11" name="cpf">
+						<input id="cpf_prefix" type="text" class="validate" campo-obrigatorio maxlength="11" size="11" name="cpf">
 						<label for="cpf_prefix">CPF <font color="red">(Obrigatório)</font></label>
 			        </div>
 				</td>
@@ -69,7 +78,7 @@
 				<td>
 					<div class="input-field col s6">
 						<i class="material-icons prefix">featured_video</i>
-						<input id="rg_prefix" type="text" class="validate" campo-obrigatorio size="18" name="rg">
+						<input id="rg_prefix" type="text" class="validate" campo-obrigatorio maxlength="18" size="18" name="rg">
 						<label for="rg_prefix">RG <font color="red">(Obrigatório)</font></label>
 			        </div>
 				</td>
@@ -114,7 +123,7 @@
 								<label for="complemento_prefix">Complemento </label>
 					        </div>
 					        <div class="input-field col s6">
-								<input id="cep_prefix" type="text" name="cep" maxlength="9" size="13" class="validate" campo-obrigatorio>
+								<input id="cep_prefix" type="text" name="cep" maxlength="8" size="8" class="validate" campo-obrigatorio>
 								<label for="cep_prefix">CEP </label>
 					        </div>
 					        <div class="input-field col s8">

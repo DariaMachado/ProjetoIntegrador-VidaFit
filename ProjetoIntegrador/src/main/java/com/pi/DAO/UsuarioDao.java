@@ -68,7 +68,7 @@ public class UsuarioDao {
 		this.estadoOperacao = false;
 		this.connection = obterConexao();
 
-		//this.connection.setAutoCommit(false);
+		this.connection.setAutoCommit(false);
 		sql = "INSERT INTO pessoa(idFuncao, primeiroNome, nomeCompleto, email, cpf, rg, telefone, senha) VALUES (?,?,?,?,?,?,?,?)";
 		this.statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
