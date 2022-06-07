@@ -46,15 +46,12 @@ public class ProdutoController extends HttpServlet {
 		else if (opcao.equals("listarProdutos")) {
 			ProdutoDao produtoDAO = new ProdutoDao();
 			List<Produto> arrayProduto = new ArrayList<>();
-			List<Categoria> arrayCategoria = new ArrayList<>();
 			
 			try {
 
 				arrayProduto = produtoDAO.listarProd();
-				arrayCategoria = produtoDAO.listarNomeCategoria();
 
 				request.setAttribute("arrayProduto", arrayProduto);
-				request.setAttribute("arrayCategoria", arrayCategoria);
 				RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/listarProdutos.jsp");
 				requestDispatcher.forward(request, response);
 			} catch (SQLException e) {
@@ -177,8 +174,6 @@ public class ProdutoController extends HttpServlet {
 			}
 		}
 	}
-
-}
 	
 
-
+}

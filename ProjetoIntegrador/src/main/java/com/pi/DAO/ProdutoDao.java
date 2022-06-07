@@ -114,38 +114,6 @@ public class ProdutoDao {
 		return listaProduto;
 	}
 	
-	public List<Categoria> listarNomeCategoria() throws SQLException{
-		ResultSet resultset = null;
-		List<Categoria> listaCategoria = new ArrayList<>();
-		
-		String sql = null;
-		this.estadoOperacao = false;
-		this.connection = obterConexao();
-		
-		
-		try {
-			sql = "Select categoria.descricao from "
-					+ "Produto, Categoria where Produto.idCategoria = Categoria.id ";
-			this.statement = this.connection.prepareStatement(sql);
-			resultset = this.statement.executeQuery();
-			
-			while(resultset.next()) {
-				Categoria c = new Categoria();
-				c.setNome(resultset.getString(1));
-				
-				listaCategoria.add(c);
-			}
-			this.statement.close();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-			System.out.println("Conexao fechada");
-			this.connection.close();
-		}
-		
-		return listaCategoria;
-	}
 	
 	public Produto listarProduto(int id_produto) throws SQLException {
 		ResultSet resultSet = null;

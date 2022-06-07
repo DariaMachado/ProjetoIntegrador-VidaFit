@@ -19,7 +19,7 @@ import com.pi.model.Endereco;
 /**
  * Servlet implementation class UsuarioController
  */
-@WebServlet(description = "Controle das informacoes da tabela usuario", urlPatterns = "/usuario")
+@WebServlet(description = "Controle das informacoes referentes aos usuarios", urlPatterns = "/usuario")
 public class UsuarioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
